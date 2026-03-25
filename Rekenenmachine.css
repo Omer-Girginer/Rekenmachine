@@ -1,0 +1,123 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #7c7c7c;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* WRAPPER */
+.calc-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* CALCULATOR */
+.calc {
+  background: #fff;
+  border-radius: 16px;
+  width: 320px;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+/* DISPLAY */
+.calc__display {
+  background: #000000;
+  padding: 1.5rem 1.4rem 1rem;
+  text-align: right;
+  min-height: 110px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.calc__expr {
+  font-size: 14px;
+  color: #888;
+  min-height: 20px;
+  margin-bottom: 4px;
+  font-family: "Courier New", monospace;
+  word-break: break-all;
+}
+
+.calc__number {
+  font-size: 2.6rem;
+  font-weight: 300;
+  color: #fff;
+  word-break: break-all;
+  line-height: 1.2;
+  font-family: "Courier New", monospace;
+}
+
+/* KEYS GRID */
+.calc__keys {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  background-color: #e0e0e0;
+}
+
+/* KEY BASE */
+.key {
+  border: none;
+  padding: 0;
+  aspect-ratio: 1;
+  font-size: 1.1rem;
+  font-family: inherit;
+  font-weight: 400;
+  cursor: pointer;
+  background-color: #fafafa;
+  color: #222;
+  transition: background-color 0.1s;
+}
+
+.key:hover {
+  background-color: #efefef;
+}
+
+.key:active {
+  background-color: #e0e0e0;
+}
+
+/* OPERATOR KEYS */
+.key--op {
+  color: #000000;
+  font-size: 1.2rem;
+}
+
+/* ACTION KEYS (AC, +/-, %) */
+.key--action {
+  color: #555;
+  font-size: 1rem;
+}
+
+/* EQUALS KEY */
+.key--equals {
+  background-color: #000000;
+  color: #fff;
+  font-size: 1.3rem;
+}
+
+.key--equals:hover {
+  background-color: #185FA5;
+}
+
+.key--equals:active {
+  background-color: #0C447C;
+}
+
+/* ZERO KEY — spans 2 columns */
+.key--zero {
+  aspect-ratio: auto;
+  grid-column: span 2;
+  text-align: left;
+  padding-left: 1.5rem;
+}
